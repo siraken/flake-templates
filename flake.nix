@@ -36,6 +36,10 @@
       formatter = forAllSystems (system: treefmtEval.${system}.config.build.wrapper);
 
       templates = {
+        default = {
+          path = ./default;
+          description = "Minimal development environment";
+        };
         node = {
           path = ./node;
           description = "Node.js development environment with corepack";
