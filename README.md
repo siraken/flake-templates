@@ -13,6 +13,11 @@ nix flake init -t github:siraken/flake-templates#<template-name>
 | Name | Description |
 | ---- | ----------- |
 | `node` | Node.js (v22) + corepack の開発環境 |
+| `php` | PHP + composer の開発環境 |
+| `ruby` | Ruby + bundler の開発環境 |
+| `rust` | Rust (rustc, cargo, rustfmt, clippy) の開発環境 |
+| `go` | Go + gopls の開発環境 |
+| `python` | Python 3 + uv の開発環境 |
 
 ## Adding a Template
 
