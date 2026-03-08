@@ -4,32 +4,32 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Nix flake テンプレート集。`nix flake init -t` で利用できる開発環境テンプレートを提供する。
+A collection of Nix flake templates. Provides development environment templates available via `nix flake init -t`.
 
 ## Architecture
 
-- `flake.nix` — ルートflake。`templates` attribute で各テンプレートを登録する
-- `<template-name>/flake.nix` — 各テンプレートの実体。`devShells` を定義する
+- `flake.nix` — Root flake. Registers each template under the `templates` attribute
+- `<template-name>/flake.nix` — The actual template. Defines `devShells`
 
-テンプレートを追加する際は:
-1. `<template-name>/` ディレクトリに `flake.nix` を作成
-2. ルートの `flake.nix` の `templates` に新しいエントリを追加
+To add a new template:
+1. Create `flake.nix` in a `<template-name>/` directory
+2. Add a new entry to `templates` in the root `flake.nix`
 
 ## Conventions
 
-- nixpkgs は `github:NixOS/nixpkgs/nixpkgs-unstable` を使用
-- 対象システム: `x86_64-linux`, `aarch64-linux`, `x86_64-darwin`, `aarch64-darwin`
-- `forAllSystems` パターンで全対象システム向けに `devShells` を生成
+- Uses `github:NixOS/nixpkgs/nixpkgs-unstable` for nixpkgs
+- Target systems: `x86_64-linux`, `aarch64-linux`, `x86_64-darwin`, `aarch64-darwin`
+- Uses the `forAllSystems` pattern to generate `devShells` for all target systems
 
 ## Commands
 
 ```bash
-# テンプレート一覧を確認
+# List available templates
 nix flake show
 
-# テンプレートを使ってプロジェクトを初期化（例: node）
+# Initialize a project with a template (e.g., node)
 nix flake init -t github:siraken/flake-templates#node
 
-# flake の評価チェック
+# Evaluate and check the flake
 nix flake check
 ```
