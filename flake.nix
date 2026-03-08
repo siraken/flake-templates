@@ -1,9 +1,40 @@
 {
   description = "siraken's flake templates";
 
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
   outputs =
-    { self, ... }:
     {
+      self,
+      nixpkgs,
+      treefmt-nix,
+      ...
+    }:
+    let
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+      treefmtEval = forAllSystems (
+        system:
+        treefmt-nix.lib.evalModule nixpkgs.legacyPackages.${system} {
+          projectRootFile = "flake.nix";
+          programs.nixfmt.enable = true;
+        }
+      );
+    in
+    {
+      formatter = forAllSystems (system: treefmtEval.${system}.config.build.wrapper);
+
       templates = {
         node = {
           path = ./node;
