@@ -25,6 +25,7 @@ nix flake init -t github:siraken/flake-templates#<template-name>
 | `elixir` | Elixir + Erlang/OTP development environment |
 | `clojure` | Clojure + Leiningen development environment |
 | `typst` | Typst + tinymist development environment |
+| `nixos` | NixOS configuration with home-manager and nix-index-database |
 
 ## Adding a Template
 

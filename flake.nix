@@ -92,6 +92,10 @@
           path = ./typst;
           description = "Typst development environment";
         };
+        nixos = {
+          path = ./nixos;
+          description = "NixOS configuration with home-manager and nix-index-database";
+        };
       };
     };
 }
