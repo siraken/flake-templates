@@ -64,6 +64,34 @@
           path = ./python;
           description = "Python development environment with uv";
         };
+        terraform = {
+          path = ./terraform;
+          description = "Terraform (OpenTofu) development environment";
+        };
+        dotnet = {
+          path = ./dotnet;
+          description = ".NET development environment";
+        };
+        flutter = {
+          path = ./flutter;
+          description = "Flutter development environment";
+        };
+        java = {
+          path = ./java;
+          description = "Java development environment with Gradle and Maven";
+        };
+        elixir = {
+          path = ./elixir;
+          description = "Elixir development environment";
+        };
+        clojure = {
+          path = ./clojure;
+          description = "Clojure development environment with Leiningen";
+        };
+        typst = {
+          path = ./typst;
+          description = "Typst development environment";
+        };
       };
     };
 }

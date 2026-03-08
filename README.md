@@ -18,6 +18,13 @@ nix flake init -t github:siraken/flake-templates#<template-name>
 | `rust` | Rust (rustc, cargo, rustfmt, clippy) development environment |
 | `go` | Go + gopls development environment |
 | `python` | Python 3 + uv development environment |
+| `terraform` | OpenTofu + tflint + terraform-docs development environment |
+| `dotnet` | .NET SDK + OmniSharp development environment |
+| `flutter` | Flutter + Dart development environment |
+| `java` | JDK + Gradle + Maven development environment |
+| `elixir` | Elixir + Erlang/OTP development environment |
+| `clojure` | Clojure + Leiningen development environment |
+| `typst` | Typst + tinymist development environment |
 
 ## Adding a Template
 
