@@ -42,7 +42,7 @@
         };
         node = {
           path = ./node;
-          description = "Node.js development environment with corepack";
+          description = "Node.js development environment with pnpm";
         };
         php = {
           path = ./php;

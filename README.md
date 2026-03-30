@@ -12,7 +12,7 @@ nix flake init -t github:siraken/flake-templates#<template-name>
 
 | Name | Description |
 | ---- | ----------- |
-| `node` | Node.js (v22) + corepack development environment |
+| `node` | Node.js (v24) + pnpm development environment |
 | `php` | PHP + composer development environment |
 | `ruby` | Ruby + bundler development environment |
 | `rust` | Rust (rustc, cargo, rustfmt, clippy) development environment |
