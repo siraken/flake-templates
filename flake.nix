@@ -96,6 +96,10 @@
           path = ./zig;
           description = "Zig development environment";
         };
+        dapps = {
+          path = ./dapps;
+          description = "Dapps development environment with Foundry and Node.js";
+        };
         nixos = {
           path = ./nixos;
           description = "NixOS configuration with home-manager and nix-index-database";
