@@ -20,15 +20,12 @@
       devShells = forAllSystems (
         system:
         let
-          pkgs = import nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          pkgs = nixpkgs.legacyPackages.${system};
         in
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              terraform
+              opentofu
               tflint
               terraform-docs
             ];

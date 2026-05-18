@@ -66,7 +66,11 @@
         };
         terraform = {
           path = ./terraform;
-          description = "Terraform (OpenTofu) development environment";
+          description = "Terraform development environment";
+        };
+        opentofu = {
+          path = ./opentofu;
+          description = "OpenTofu development environment";
         };
         dotnet = {
           path = ./dotnet;
