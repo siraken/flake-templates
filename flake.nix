@@ -40,6 +40,10 @@
           path = ./default;
           description = "Minimal development environment";
         };
+        ada = {
+          path = ./ada;
+          description = "Ada development environment with GNAT, gprbuild and Alire";
+        };
         node = {
           path = ./node;
           description = "Node.js development environment with pnpm";
