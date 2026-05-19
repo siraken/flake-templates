@@ -13,6 +13,12 @@ nix flake init -t github:siraken/flake-templates#<template-name>
 | Name | Description |
 | ---- | ----------- |
 | `ada` | Ada (GNAT) + gprbuild + Alire development environment |
+| `c` | C (GCC) + GNU Make + clang-tools development environment |
+| `cpp` | C++ (GCC) + CMake + clang-tools development environment |
+| `haskell` | Haskell (GHC) + Cabal + haskell-language-server development environment |
+| `ocaml` | OCaml + Dune + opam + ocaml-lsp development environment |
+| `kotlin` | Kotlin + Gradle development environment |
+| `lua` | Lua + LuaJIT + lua-language-server development environment |
 | `node` | Node.js (v24) + pnpm development environment |
 | `php` | PHP + composer development environment |
 | `ruby` | Ruby + bundler development environment |

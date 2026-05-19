@@ -44,6 +44,30 @@
           path = ./ada;
           description = "Ada development environment with GNAT, gprbuild and Alire";
         };
+        c = {
+          path = ./c;
+          description = "C development environment with GCC, GNU Make and clang-tools";
+        };
+        cpp = {
+          path = ./cpp;
+          description = "C++ development environment with GCC, CMake and clang-tools";
+        };
+        haskell = {
+          path = ./haskell;
+          description = "Haskell development environment with GHC, Cabal and HLS";
+        };
+        ocaml = {
+          path = ./ocaml;
+          description = "OCaml development environment with Dune, opam and ocaml-lsp";
+        };
+        kotlin = {
+          path = ./kotlin;
+          description = "Kotlin development environment with Gradle";
+        };
+        lua = {
+          path = ./lua;
+          description = "Lua development environment with LuaJIT and lua-language-server";
+        };
         node = {
           path = ./node;
           description = "Node.js development environment with pnpm";
